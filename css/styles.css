@@ -1,5 +1,6 @@
 :root {
   --primary-accent-color: #4d5ae5;
+  --secondary-accent-color: #31d0aa;
   --primary-text-color: #434455;
   --headings-color: #2e2f42;
   --main-white: #ffffff;
@@ -133,10 +134,16 @@ body {
 
 /* ==========================HERO========================== */
 .hero {
+  width: 1440px;
   padding-top: 192px;
   padding-bottom: 192px;
-
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
   background-color: var(--headings-color);
+  background-sice: cover;
 }
 
 .hero-title {
@@ -166,7 +173,6 @@ body {
   border-radius: 4px;
   border-width: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   cursor: pointer;
 }
 
@@ -174,6 +180,11 @@ body {
   background-color: #404bbf;
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 /* ==========================QUALITIES========================== */
 .qualities-subtitle {
   font-size: 20px;
@@ -201,6 +212,18 @@ body {
 
 .qualities-subtitle {
   margin-bottom: 8px;
+}
+
+.qualities-pics {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+}
+
+.svg-icon {
+  margin: auto;
 }
 /* ==========================WORKS========================== */
 .works {
@@ -259,6 +282,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  margin-bottom: 12px;
 }
 
 .team-list {
@@ -274,12 +298,73 @@ body {
 .team-content-wrapper {
   background-color: #ffffff;
   padding: 32px 16px;
-
   text-align: center;
-
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-accent-color);
+}
+
+/* ==========================CUSTOMERS========================== */
+.customers-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--headings-color);
+
+  margin-bottom: 72px;
+}
+
+.customer-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customer-list-item {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.customer-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-icon {
+  fill: #8e8f99;
+}
+
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon {
+  fill: var(--primary-accent-color);
+}
+
+.customer-list-item:hover,
+.customer-list-item:focus {
+  border: 1px solid var(--primary-accent-color);
 }
 
 /* ==========================LOGO-FOOTER========================== */
@@ -311,6 +396,43 @@ body {
   letter-spacing: 0.02em;
   color: #e7e9fc;
   margin-top: 16px;
+  margin-right: 120px;
+}
+.footer-content {
+  display: flex;
+  align-items: baseline;
+}
+.footer-social-icon {
+  fill: var(--light-background);
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-white);
+}
+
+.footer-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--secondary-accent-color);
 }
 
 /* ==========================PORTFOLIO-HEADER========================== */
@@ -393,6 +515,11 @@ body {
 
 .project-card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 48px;
+}
+
+.project-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-content-wrapper {
